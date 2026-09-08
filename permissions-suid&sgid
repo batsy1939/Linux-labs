@@ -1,0 +1,13 @@
+Puedes hacer una cadena de comando which python3.11 | xargs ls -l 
+Te listara mostrando sus permisos con la direccion
+
+Para hacer que cuando hagas un find / -perm f -2000 2>/dev/null no te salgan los errores
+
+Permisos especiales: dependiendo del permiso especial que tenga un archivo, puede ejecutarse con los privilegios del usuario dueño o del grupo dueño
+
+SUID (4000) se ejecuta como el usuario dueño -rwsr-xr-x
+Por ejemplo si python tuviera este permiso y el dueño es root nos podrian hacer una escalada de privilegios ejecutando comandos como root, usando import os
+
+SGID (2000) se ejecuta con el grupo dueño
+
+Sticky Bit (1000) controla el borrado/renombrado de archivos en directorios
